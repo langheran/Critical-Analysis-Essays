@@ -1,0 +1,107 @@
+---
+title: A Vehicle Parking Detection Method Using Image Segmentation
+subtitle:
+author: "[Nisim Hurst](mailto:langheran@gmail.com)"
+date: Thursday 2 May 2019
+abstract: ""
+bibliography: A-Vehicle-Parking-Detection-Method-Using-Image-Segmentation/A-Vehicle-Parking-Detection-Method-Using-Image-Segmentation.bib
+urlcolor: blue
+biblio-style: "authoryear" # "apalike" "apa" "authoryear"
+link-citations: true
+csl: ieee.csl
+output:
+  bookdown::pdf_document2:
+    pandoc_args:
+      - "--csl"
+      - "ieee.csl"
+      - "--metadata"
+      - "link-citations"
+      - "--filter"
+      - "pandoc-eqnos"
+    toc: no
+    toc_depth: 5
+    number_sections: no
+    keep_tex: true
+    citation_package: biblatex
+#    includes:
+#      before_body: ../doc-prefix.tex
+header-includes: |
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{subfig}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \usepackage{truncate}
+    \renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+    \fancyhf{}
+    \lhead{\small\truncate{400pt}{\rightmark}}
+    \rhead{\small\hyperref[toc]{Table Of Contents}}
+    \rfoot{Page \thepage}
+    \usepackage{caption}
+    \usepackage{listings}
+    \usepackage{attachfile}
+    \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+    \usepackage{cleveref}
+
+    \usepackage{xcolor}
+    \definecolor{block-gray}{gray}{0.85}
+    \usepackage{environ}
+    \NewEnviron{quoteblock}
+    {\colorbox{block-gray}{
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+    \small\addtolength{\leftskip}{10mm}
+    \addtolength{\rightskip}{10mm}
+    \BODY}}
+    }
+    \renewcommand{\quote}{\quoteblock}
+    \renewcommand{\endquote}{\endquoteblock}
+    \ifdef{\printbibliography}{
+       \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+       \let\oldprintbibliography\printbibliography
+       \renewcommand{\printbibliography}[1]{
+          \phantomsection
+          \addcontentsline{toc}{section}{References}
+          \oldprintbibliography[title={References},heading=subsubbibliography]
+          }
+    }{
+
+    }
+#site: bookdown::bookdown_site
+#documentclass: extarticle
+#geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
+#fontsize: 17pt
+#linestretch: 1.5
+---
+\label{toc}
+
+## A Vehicle Parking Detection Method Using Image Segmentation
+### Abstract
+
+The article was written by [@Yamada_2001] on 2001. It was cited [41](https://scholar.google.com/scholar?cluster=46549803554427231&hl=en&as_sdt=2005&sciodt=0,5) times according to Google Scholar. The task performed was occupancy level detection using true positive rate over pre-annotated parking spots (stalls). 
+
+### Hypothesis
+Using features only from gray segments extracted from color histograms can achieve high true positive rate occupancy level detection. 
+
+### Evidence and Results
+
+#### Dataset
+The training dataset consist of 129 images extracted during 3 days in intervals of 20 minutes from an outdoor camera. From those images a total of 5182 annotated cells were extracted. A threshold for the gray level was determined from those cells. The cells are marked as occupied or vacant.
+
+The test dataset consist of 165 images extracted during 4 days at intervals of 20 minutes. 6733 cells then were used to evaluate the detection rate (true positive rate) and  misdetection (false positive rate).  Nighttime images from 2 days also were used.
+
+#### Evidence
+The authors variate the resolution per cell, night vs day and {rain, cloudy, clear} weather conditions. This results are presented in tabular form with a fixed gray threshold level or the optimal threshold level per day.
+
+All the results are presented using detection rate that is assumed to be the same as true positive rate.
+
+### Contribution
+The authors proved occupancy detection can be done with 98.7% TPR by training a threshold over gray level.
+Given that shape features are completely ignored, the algorithm is robust to different car shapes and weather conditions.
+
+### Weaknesses
+The dataset consist solely of images from sunrise to sunset and nighttime, so the algorithm is not capable to learn a different set of gray thresholds for twilight conditions. 
+
+Likewise, a single TV camera was mounted on a neighboring building. Thus, there is still the need to test if the algorithm generalize well under different conditions, specially different altitudes and indoor environments.
+
+### Future Work
+Yamada and Mizuno propose to extend the algorithm for nighttime detection by a suitable definition of the metric used.

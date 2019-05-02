@@ -1,0 +1,191 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={A Vehicle Parking Detection Method Using Image Segmentation},
+            pdfauthor={Nisim Hurst},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[style=authoryear]{biblatex}
+
+\addbibresource{A-Vehicle-Parking-Detection-Method-Using-Image-Segmentation/A-Vehicle-Parking-Detection-Method-Using-Image-Segmentation.bib}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{A Vehicle Parking Detection Method Using Image Segmentation}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{\href{mailto:langheran@gmail.com}{Nisim Hurst}}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{Thursday 2 May 2019}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{truncate}
+\renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+\fancyhf{}
+\lhead{\small\truncate{400pt}{\rightmark}}
+\rhead{\small\hyperref[toc]{Table Of Contents}}
+\rfoot{Page \thepage}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{attachfile}
+\makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage{cleveref}
+
+\usepackage{xcolor}
+\definecolor{block-gray}{gray}{0.85}
+\usepackage{environ}
+\NewEnviron{quoteblock}
+{\colorbox{block-gray}{
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+\small\addtolength{\leftskip}{10mm}
+\addtolength{\rightskip}{10mm}
+\BODY}}
+}
+\renewcommand{\quote}{\quoteblock}
+\renewcommand{\endquote}{\endquoteblock}
+\ifdef{\printbibliography}{
+   \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+   \let\oldprintbibliography\printbibliography
+   \renewcommand{\printbibliography}[1]{
+      \phantomsection
+      \addcontentsline{toc}{section}{References}
+      \oldprintbibliography[title={References},heading=subsubbibliography]
+      }
+}{
+
+}
+
+\begin{document}
+\maketitle
+
+\label{toc}
+
+\hypertarget{a-vehicle-parking-detection-method-using-image-segmentation}{%
+\subsection{A Vehicle Parking Detection Method Using Image Segmentation}\label{a-vehicle-parking-detection-method-using-image-segmentation}}
+
+\hypertarget{abstract}{%
+\subsubsection{Abstract}\label{abstract}}
+
+The article was written by \autocite{Yamada_2001} on 2001. It was cited \href{https://scholar.google.com/scholar?cluster=46549803554427231\&hl=en\&as_sdt=2005\&sciodt=0,5}{41} times according to Google Scholar. The task performed was occupancy level detection using true positive rate over pre-annotated parking spots (stalls).
+
+\hypertarget{hypothesis}{%
+\subsubsection{Hypothesis}\label{hypothesis}}
+
+Using features only from gray segments extracted from color histograms can achieve high true positive rate occupancy level detection.
+
+\hypertarget{evidence-and-results}{%
+\subsubsection{Evidence and Results}\label{evidence-and-results}}
+
+\hypertarget{dataset}{%
+\paragraph{Dataset}\label{dataset}}
+
+The training dataset consist of 129 images extracted during 3 days in intervals of 20 minutes from an outdoor camera. From those images a total of 5182 annotated cells were extracted. A threshold for the gray level was determined from those cells. The cells are marked as occupied or vacant.
+
+The test dataset consist of 165 images extracted during 4 days at intervals of 20 minutes. 6733 cells then were used to evaluate the detection rate (true positive rate) and misdetection (false positive rate). Nighttime images from 2 days also were used.
+
+\hypertarget{evidence}{%
+\paragraph{Evidence}\label{evidence}}
+
+The authors variate the resolution per cell, night vs day and \{rain, cloudy, clear\} weather conditions. This results are presented in tabular form with a fixed gray threshold level or the optimal threshold level per day.
+
+All the results are presented using detection rate that is assumed to be the same as true positive rate.
+
+\hypertarget{contribution}{%
+\subsubsection{Contribution}\label{contribution}}
+
+The authors proved occupancy detection can be done with 98.7\% TPR by training a threshold over gray level.
+Given that shape features are completely ignored, the algorithm is robust to different car shapes and weather conditions.
+
+\hypertarget{weaknesses}{%
+\subsubsection{Weaknesses}\label{weaknesses}}
+
+The dataset consist solely of images from sunrise to sunset and nighttime, so the algorithm is not capable to learn a different set of gray thresholds for twilight conditions.
+
+Likewise, a single TV camera was mounted on a neighboring building. Thus, there is still the need to test if the algorithm generalize well under different conditions, specially different altitudes and indoor environments.
+
+\hypertarget{future-work}{%
+\subsubsection{Future Work}\label{future-work}}
+
+Yamada and Mizuno propose to extend the algorithm for nighttime detection by a suitable definition of the metric used.
+
+\printbibliography
+
+
+\end{document}
