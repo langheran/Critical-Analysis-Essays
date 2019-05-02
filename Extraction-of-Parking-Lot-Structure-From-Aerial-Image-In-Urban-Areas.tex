@@ -1,0 +1,193 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={Extraction of Parking Lot Structure From Aerial Image In Urban Areas},
+            pdfauthor={Nisim Hurst},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[style=authoryear]{biblatex}
+
+\addbibresource{Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas/Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.bib}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{Extraction of Parking Lot Structure From Aerial Image In Urban Areas}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{\href{mailto:langheran@gmail.com}{Nisim Hurst}}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{Thursday 2 May 2019}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{truncate}
+\renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+\fancyhf{}
+\lhead{\small\truncate{400pt}{\rightmark}}
+\rhead{\small\hyperref[toc]{Table Of Contents}}
+\rfoot{Page \thepage}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{attachfile}
+\makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage{cleveref}
+
+\usepackage{xcolor}
+\definecolor{block-gray}{gray}{0.85}
+\usepackage{environ}
+\NewEnviron{quoteblock}
+{\colorbox{block-gray}{
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+\small\addtolength{\leftskip}{10mm}
+\addtolength{\rightskip}{10mm}
+\BODY}}
+}
+\renewcommand{\quote}{\quoteblock}
+\renewcommand{\endquote}{\endquoteblock}
+\ifdef{\printbibliography}{
+   \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+   \let\oldprintbibliography\printbibliography
+   \renewcommand{\printbibliography}[1]{
+      \phantomsection
+      \addcontentsline{toc}{section}{References}
+      \oldprintbibliography[title={References},heading=subsubbibliography]
+      }
+}{
+
+}
+
+\begin{document}
+\maketitle
+
+\label{toc}
+
+\hypertarget{extraction-of-parking-lot-structure-from-aerial-image-in-urban-areas}{%
+\subsection{Extraction of Parking Lot Structure From Aerial Image In Urban Areas}\label{extraction-of-parking-lot-structure-from-aerial-image-in-urban-areas}}
+
+The article was written by \autocite{koutaki2016extraction}. It was was cited \href{https://scholar.google.com/scholar?q=Extraction\%20of\%20Parking\%20Lot\%20Structure\%20From\%20Aerial\%20Image\%20In\%20Urban\%20Areas\%20koutaki\&hl=en\&as_sdt=0\&as_vis=1\&oi=scholart\&sa=X\&ved=0ahUKEwiN67qBocbWAhXrjVQKHcX0BYwQgQMIMDAA}{0} times according to Google Scholar. The task performed was detecting rectangular parking lot areas from aerial images. The metric for measuring performance is correctness., i.e.~the ratio between the correctly extracted parking lots and the total extracted parking lots. They also use a \% of detection metric, equal to the ratio between parking spots correctly extracted and the total real parking spots.
+
+\hypertarget{hypothesis}{%
+\subsubsection{Hypothesis}\label{hypothesis}}
+
+Combining vehicle detection with parking spot detection will be useful to detect rectangular parking lot structures.
+
+\hypertarget{evidence-and-results}{%
+\subsubsection{Evidence and Results}\label{evidence-and-results}}
+
+\hypertarget{dataset}{%
+\paragraph{Dataset}\label{dataset}}
+
+For vehicle detection 2520 positive image patches of 14x32 pixels were used. Likewise, 4800 negative patches were used. For parking space detection a single image patch of 15x28 pixels was used.
+
+For parking lot detection, 4 images of 2000x2000 pixels were used. Zoom level is 20cm per pixel.
+
+The images were used to train a Haar-like detector in conjunction with an AdaBoost ensemble classifier.
+
+\hypertarget{results}{%
+\paragraph{Results}\label{results}}
+
+The parking lot rows were deduced using hierarchical grouping, starting with those parking spots that their centers are just one width of a parking spot apart.
+
+The authors achieved 66.9\% completeness detecting vehicles, 30.2\% completeness for parking spot detection and correctness of 95\% in rectangular parking lot extraction. In the later case, a completeness of 100\% is assumed.
+
+\hypertarget{contribution}{%
+\subsubsection{Contribution}\label{contribution}}
+
+First, the paper thoroughly defines the geometric structure and appearance model of the parking lot.
+
+Second, high resolution elevation data is used to remove buildings. They combined a Digital Elevation Model and a Digital Surface Model with digital interpolation with the 4 urban zone images.
+
+Third, a method for extracting those parking lots is proposed. This method is based on extracting both parking spaces and vehicle detection in parallel.
+
+\hypertarget{weaknesses}{%
+\subsubsection{Weaknesses}\label{weaknesses}}
+
+No comparison with other methods is shown. All the parking lots are assumed to be rectangular. A single angle of 90 degrees between the parking spot and the parking row is assumed.
+
+\hypertarget{future-work}{%
+\subsubsection{Future Work}\label{future-work}}
+
+For future work, the authors mention a shadow-resistant vehicle detection and to improve the single parking space extraction. Also, the authors mention that they wish to extend the algorithm to detect parking lots of arbitrary shape.
+
+\href{gotosumatra:5\%7C32\%7C613\%7CG\%3A\%5CMy\%20Drive\%5CThesis\%5C13Feb\%5Fcomments\%5Creferences\%5CExtraction\%20of\%20Parking\%20Lot\%20Structure\%20From\%20Aerial\%20Image\%20In\%20Urban\%20Areas\%2Epdf}{Detection of vehicles}
+
+\printbibliography
+
+
+\end{document}

@@ -1,0 +1,185 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={A Transfer Learning approach to parking lot},
+            pdfauthor={Nisim Hurst},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[style=authoryear]{biblatex}
+
+\addbibresource{A-Transfer-Learning-approach-to-parking-lot/A-Transfer-Learning-approach-to-parking-lot.bib}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{A Transfer Learning approach to parking lot}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{\href{mailto:langheran@gmail.com}{Nisim Hurst}}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{Thursday 2 May 2019}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{truncate}
+\renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+\fancyhf{}
+\lhead{\small\truncate{400pt}{\rightmark}}
+\rhead{\small\hyperref[toc]{Table Of Contents}}
+\rfoot{Page \thepage}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{attachfile}
+\makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage{cleveref}
+
+\usepackage{xcolor}
+\definecolor{block-gray}{gray}{0.85}
+\usepackage{environ}
+\NewEnviron{quoteblock}
+{\colorbox{block-gray}{
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+\small\addtolength{\leftskip}{10mm}
+\addtolength{\rightskip}{10mm}
+\BODY}}
+}
+\renewcommand{\quote}{\quoteblock}
+\renewcommand{\endquote}{\endquoteblock}
+\ifdef{\printbibliography}{
+   \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+   \let\oldprintbibliography\printbibliography
+   \renewcommand{\printbibliography}[1]{
+      \phantomsection
+      \addcontentsline{toc}{section}{References}
+      \oldprintbibliography[title={References},heading=subsubbibliography]
+      }
+}{
+
+}
+
+\begin{document}
+\maketitle
+
+\label{toc}
+
+\hypertarget{a-transfer-learning-approach-to-parking-lot}{%
+\subsection{A Transfer Learning Approach to Parking Lot}\label{a-transfer-learning-approach-to-parking-lot}}
+
+The article was written by \autocite{8085049}. It was was cited \href{https://scholar.google.com/scholar?hl=en\&as_sdt=0\%2C5\&as_vis=1\&q=A+Transfer+Learning+approach+to+parking+lot+Cisek\&btnG=}{0} times according to Google Scholar. The task performed was aerial patch imagery classification using the top 1 error rate and overall accuracy. The main focus of this paper is to compare a CNN with transfer learning based on the AlexNet network and a CNN with weights initialized from scratch.
+
+\hypertarget{hypothesis}{%
+\subsubsection{Hypothesis}\label{hypothesis}}
+
+Classification accuracy over aerial parking lot patches can be improved by using transfer learning.
+
+\hypertarget{evidence-and-results}{%
+\subsubsection{Evidence and Results}\label{evidence-and-results}}
+
+\hypertarget{dataset}{%
+\paragraph{Dataset}\label{dataset}}
+
+The images were obtained from the New York State GIS Clearinghouse. 12,000 image patches of 60x60 pixels with an overlapping of 30 pixels, i.e.~there were just 8,000 or less completely different patches to classify. These were used both for training and validation. The target class is either \emph{background}, \emph{parking lot} or \emph{none}.
+
+\hypertarget{evidence}{%
+\paragraph{Evidence}\label{evidence}}
+
+The authors tested 2 nets with transfer learning, namely LeNet and AlexNet. The layer architecture was left untouched. Just the learning rate.
+
+\hypertarget{contribution}{%
+\subsubsection{Contribution}\label{contribution}}
+
+First, the article provides solid evidence that neural networks can be applied to classify parking lot patches.
+
+Second, the article compares performance gains by using transfer learning in two different convolutional network architectures. The dataset used for transfer learning was ILSVRC 2012. A 10.7\% overall accuracy improvement was gained by using transfer learning.
+
+\hypertarget{weaknesses}{%
+\subsubsection{Weaknesses}\label{weaknesses}}
+
+The classification is applied to image patches of arbitrary size, i.e.~60x60 pixels each overlapping by 30 pixels (50\%). This patch size limits the features that can be learned in the convolutional layers due to the imposed padding.
+
+Also, there is no segmentation, just classification of these image patches of fixed resolution and altitude. Partial occlusions are not considered neither.
+
+\hypertarget{future-work}{%
+\subsubsection{Future Work}\label{future-work}}
+
+The authors mention that other CNNs must be tested to establish a more conclusive relation between domain and the usefulness of transfer learning.
+
+\printbibliography
+
+
+\end{document}

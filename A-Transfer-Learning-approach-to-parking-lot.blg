@@ -1,0 +1,17 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'A-Transfer-Learning-approach-to-parking-lot.blg'
+[128] biber-MSWIN64:313> INFO - === 
+[196] Biber.pm:371> INFO - Reading 'A-Transfer-Learning-approach-to-parking-lot.bcf'
+[590] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
+[645] Biber.pm:3976> INFO - Processing section 0
+[712] Biber.pm:4136> INFO - Looking for bibtex format file 'A-Transfer-Learning-approach-to-parking-lot/A-Transfer-Learning-approach-to-parking-lot.bib' for section 0
+[715] bibtex.pm:1500> INFO - LaTeX decoding ...
+[724] bibtex.pm:1316> INFO - Found BibTeX data source 'A-Transfer-Learning-approach-to-parking-lot/A-Transfer-Learning-approach-to-parking-lot.bib'
+[726] Utils.pm:193> WARN - I didn't find a database entry for '8085049' (section 0)
+[779] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[779] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[779] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[779] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[780] bbl.pm:617> INFO - Writing 'A-Transfer-Learning-approach-to-parking-lot.bbl' with encoding 'UTF-8'
+[780] bbl.pm:720> INFO - Output to A-Transfer-Learning-approach-to-parking-lot.bbl
+[781] Biber.pm:110> INFO - WARNINGS: 1

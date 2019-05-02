@@ -1,0 +1,103 @@
+---
+title: Parking Lot Analysis and Visualization from Aerial Images
+subtitle:
+author: "[Nisim Hurst](mailto:langheran@gmail.com)"
+date: Thursday 2 May 2019
+abstract: ""
+bibliography: Parking-Lot-Analysis-and-Visualization-from-Aerial-Images/Parking-Lot-Analysis-and-Visualization-from-Aerial-Images.bib
+urlcolor: blue
+biblio-style: "authoryear" # "apalike" "apa" "authoryear"
+link-citations: true
+csl: ieee.csl
+output:
+  bookdown::pdf_document2:
+    pandoc_args:
+      - "--csl"
+      - "ieee.csl"
+      - "--metadata"
+      - "link-citations"
+      - "--filter"
+      - "pandoc-eqnos"
+    toc: no
+    toc_depth: 5
+    number_sections: no
+    keep_tex: true
+    citation_package: biblatex
+#    includes:
+#      before_body: ../doc-prefix.tex
+header-includes: |
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{subfig}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \usepackage{truncate}
+    \renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+    \fancyhf{}
+    \lhead{\small\truncate{400pt}{\rightmark}}
+    \rhead{\small\hyperref[toc]{Table Of Contents}}
+    \rfoot{Page \thepage}
+    \usepackage{caption}
+    \usepackage{listings}
+    \usepackage{attachfile}
+    \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+    \usepackage{cleveref}
+
+    \usepackage{xcolor}
+    \definecolor{block-gray}{gray}{0.85}
+    \usepackage{environ}
+    \NewEnviron{quoteblock}
+    {\colorbox{block-gray}{
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+    \small\addtolength{\leftskip}{10mm}
+    \addtolength{\rightskip}{10mm}
+    \BODY}}
+    }
+    \renewcommand{\quote}{\quoteblock}
+    \renewcommand{\endquote}{\endquoteblock}
+    \ifdef{\printbibliography}{
+       \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+       \let\oldprintbibliography\printbibliography
+       \renewcommand{\printbibliography}[1]{
+          \phantomsection
+          \addcontentsline{toc}{section}{References}
+          \oldprintbibliography[title={References},heading=subsubbibliography]
+          }
+    }{
+
+    }
+#site: bookdown::bookdown_site
+#documentclass: extarticle
+#geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
+#fontsize: 17pt
+#linestretch: 1.5
+---
+\label{toc}
+
+## Parking Lot Analysis and Visualization from Aerial Images
+The article was written by [@wang1998parking]. It was was cited [35](https://scholar.google.com/scholar?cites=10362145164432338889&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was detecting parking spots and recovery of the ground texture using completeness and correctness on a single parking spot. Neither learning or training was used.
+
+### Hypothesis
+3D vehicle elevation data can be combined with a texture recognition system to generate a clean parking lot surface. This surface can then be used to simulate parking lot activities.
+
+### Evidence and Results
+#### Dataset
+
+There is just a pair of high resolution images from the Lockheed/Martin military complex. These images have a total of 77 parking spots lines.
+
+#### Results
+Parking spot marker detection confusion matrix intermediate results is presented. From the 77 actual markers just 59 were correctly extracted, a completeness of 76%. Clustering is applied to parking spot widths hypothesis. The global average width is calculated and these results are also presented. 
+
+Finally, the final result is a full 3D reconstruction of the parking lot areas (without any further metric for measuring accuracy). 
+
+### Contribution
+
+First, an elevation map produced from two images (stereo) is used to first distinguish vehicles from the ground. A system for automatic surface texture and microstructure extraction (STME) is used to identify individual **free** parking spots. Also, a _oriented region growing_ algorithm combined with some weight tuning formula is used to extract the parking spots from the previously extracted vehicles. Finally using the combined texture, the method repairs low quality or occluded parking spots. 
+
+### Weaknesses
+The method treats each parking spot as part of a texture and assume this texture is constant through the parking lot image. Thus, it seeks to calculate the dimension parameters globally. This means that if we had parking spots of arbitrary distinct sizes the method would fail.
+
+Also, if the parking lot is full, the texture detection phase becomes unreliable because there a not much visible parking spot markers.
+
+### Future Work
+Shadows can be used as a cue to separate individual parking spots, as proposed by Chellappa.

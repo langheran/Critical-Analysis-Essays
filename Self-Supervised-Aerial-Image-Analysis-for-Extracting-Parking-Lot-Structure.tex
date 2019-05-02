@@ -1,0 +1,204 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={Self-Supervised Aerial Image Analysis for Extracting Parking Lot Structure},
+            pdfauthor={Nisim Hurst},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[style=authoryear]{biblatex}
+
+\addbibresource{Self-Supervised-Aerial-Image-Analysis-for-Extracting-Parking-Lot-Structure/Self-Supervised-Aerial-Image-Analysis-for-Extracting-Parking-Lot-Structure.bib}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{Self-Supervised Aerial Image Analysis for Extracting Parking Lot Structure}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{\href{mailto:langheran@gmail.com}{Nisim Hurst}}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{Thursday 2 May 2019}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{truncate}
+\renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+\fancyhf{}
+\lhead{\small\truncate{400pt}{\rightmark}}
+\rhead{\small\hyperref[toc]{Table Of Contents}}
+\rfoot{Page \thepage}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{attachfile}
+\makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage{cleveref}
+
+\usepackage{xcolor}
+\definecolor{block-gray}{gray}{0.85}
+\usepackage{environ}
+\NewEnviron{quoteblock}
+{\colorbox{block-gray}{
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+\small\addtolength{\leftskip}{10mm}
+\addtolength{\rightskip}{10mm}
+\BODY}}
+}
+\renewcommand{\quote}{\quoteblock}
+\renewcommand{\endquote}{\endquoteblock}
+\ifdef{\printbibliography}{
+   \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+   \let\oldprintbibliography\printbibliography
+   \renewcommand{\printbibliography}[1]{
+      \phantomsection
+      \addcontentsline{toc}{section}{References}
+      \oldprintbibliography[title={References},heading=subsubbibliography]
+      }
+}{
+
+}
+
+\begin{document}
+\maketitle
+
+\label{toc}
+
+\hypertarget{self-supervised-aerial-image-analysis-for-extracting-parking-lot-structure}{%
+\subsection{Self-Supervised Aerial Image Analysis for Extracting Parking Lot Structure}\label{self-supervised-aerial-image-analysis-for-extracting-parking-lot-structure}}
+
+The article was written by Young-Woo Seo \autocite{seo2009self}. It was was cited \href{https://scholar.google.com/scholar?client=ubuntu\&channel=fs\&oe=utf-8\&pws=1\&safe=active\&um=1\&ie=UTF-8\&lr\&cites=7197783101959033316}{19} times according to Google Scholar. The task performed was estimating the parking lot structure from single parking spot detection using overall accuracy metric. The structure in this case is given by the global height, width, orientation and centroid location alignment.
+
+\hypertarget{hypothesis}{%
+\subsubsection{Hypothesis}\label{hypothesis}}
+
+A method that takes advantage of self-supervised low level (parking spot level) training will minimize human intervention while accurately estimate the parking lot structure.
+
+\hypertarget{evidence-and-results}{%
+\subsubsection{Evidence and Results}\label{evidence-and-results}}
+
+\hypertarget{dataset}{%
+\paragraph{Dataset}\label{dataset}}
+
+Thirteen aerial images were collected from Google maps service. Those images have about 147 visible parking spots on average, adding up to 1912 parking spots in total.
+
+\hypertarget{results}{%
+\paragraph{Results}\label{results}}
+
+Evidence is presented in two parts. First, the overall accuracy of the initial estimates of the low-level line clustering and parking blocks method with their correspondence false positive and false negative rates. A false positive is considered more problematic because it would guide an autonomous robot to drive in unsafe places.
+
+Then, three self-supervised classifiers are evaluated, namely: 1. Support Vector Machines, 2. Eigenspots and 3. Pairwise Markov Random Fields (with GMM). A fourth model combining Eigenspots and SVMs is also included in the test battery. Their results are presented contrasting the results obtained by training using the canonical parking spots alone and training by first enriching the dataset with self-supervised sample generation.
+
+\hypertarget{contribution}{%
+\subsubsection{Contribution}\label{contribution}}
+
+The main contribution of the paper is the comparison of the self-supervised approach vs the supervised approach through several machine learning models.
+
+A second contribution is a serial method that consist of the following high level steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Generate the parking spot global size parameters.
+\item
+  Generate canonical parking spots templates.
+\item
+  Generate initial parking spot estimates.
+\item
+  Calculate global distances between the parking spots.
+\item
+  Interpolate and extrapolate parking spot centroids in a single row.
+\item
+  Filter the hypothesis using the templates for self-supervised classifiers.
+\end{enumerate}
+
+\hypertarget{weaknesses}{%
+\subsubsection{Weaknesses}\label{weaknesses}}
+
+The angle between the parking spots and the parking block is assumed fixed to 90 degrees.
+Also, distances that define the parking row structure and individual parking spot parameters are calculated globally.
+
+\hypertarget{future-work}{%
+\subsubsection{Future Work}\label{future-work}}
+
+The authors propose using more machine learning trainable models that incorporate prior information to get a conclusive idea of the accuracy gain by using the self-supervised approach for this task.\\
+Histogram of Oriented Gradients is also proposed to extract more sophisticated feature representations.
+
+\printbibliography
+
+
+\end{document}

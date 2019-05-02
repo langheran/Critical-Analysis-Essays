@@ -1,0 +1,17 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.blg'
+[108] biber-MSWIN64:313> INFO - === 
+[428] Biber.pm:371> INFO - Reading 'Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.bcf'
+[715] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
+[761] Biber.pm:3976> INFO - Processing section 0
+[818] Biber.pm:4136> INFO - Looking for bibtex format file 'Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas/Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.bib' for section 0
+[825] bibtex.pm:1500> INFO - LaTeX decoding ...
+[839] bibtex.pm:1316> INFO - Found BibTeX data source 'Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas/Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.bib'
+[842] Utils.pm:193> WARN - I didn't find a database entry for 'koutaki2016extraction' (section 0)
+[873] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[873] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[873] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[873] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[874] bbl.pm:617> INFO - Writing 'Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.bbl' with encoding 'UTF-8'
+[874] bbl.pm:720> INFO - Output to Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.bbl
+[875] Biber.pm:110> INFO - WARNINGS: 1

@@ -1,0 +1,17 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'Parking-Lot-Analysis-and-Visualization-from-Aerial-Images.blg'
+[86] biber-MSWIN64:313> INFO - === 
+[159] Biber.pm:371> INFO - Reading 'Parking-Lot-Analysis-and-Visualization-from-Aerial-Images.bcf'
+[420] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
+[501] Biber.pm:3976> INFO - Processing section 0
+[570] Biber.pm:4136> INFO - Looking for bibtex format file 'Parking-Lot-Analysis-and-Visualization-from-Aerial-Images/Parking-Lot-Analysis-and-Visualization-from-Aerial-Images.bib' for section 0
+[573] bibtex.pm:1500> INFO - LaTeX decoding ...
+[579] bibtex.pm:1316> INFO - Found BibTeX data source 'Parking-Lot-Analysis-and-Visualization-from-Aerial-Images/Parking-Lot-Analysis-and-Visualization-from-Aerial-Images.bib'
+[581] Utils.pm:193> WARN - I didn't find a database entry for 'wang1998parking' (section 0)
+[626] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[626] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[626] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[626] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[627] bbl.pm:617> INFO - Writing 'Parking-Lot-Analysis-and-Visualization-from-Aerial-Images.bbl' with encoding 'UTF-8'
+[627] bbl.pm:720> INFO - Output to Parking-Lot-Analysis-and-Visualization-from-Aerial-Images.bbl
+[638] Biber.pm:110> INFO - WARNINGS: 1
