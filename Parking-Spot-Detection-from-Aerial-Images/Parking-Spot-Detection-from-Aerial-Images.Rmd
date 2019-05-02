@@ -1,0 +1,112 @@
+---
+title: Parking Spot Detection from Aerial Images
+subtitle:
+author: "[Nisim Hurst](mailto:langheran@gmail.com)"
+date: Thursday 2 May 2019
+abstract: ""
+bibliography: Parking-Spot-Detection-from-Aerial-Images/Parking-Spot-Detection-from-Aerial-Images.bib
+urlcolor: blue
+biblio-style: "authoryear" # "apalike" "apa" "authoryear"
+link-citations: true
+csl: ieee.csl
+output:
+  bookdown::pdf_document2:
+    pandoc_args:
+      - "--csl"
+      - "ieee.csl"
+      - "--metadata"
+      - "link-citations"
+      - "--filter"
+      - "pandoc-eqnos"
+    toc: no
+    toc_depth: 5
+    number_sections: no
+    keep_tex: true
+    citation_package: biblatex
+#    includes:
+#      before_body: ../doc-prefix.tex
+header-includes: |
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{subfig}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \usepackage{truncate}
+    \renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+    \fancyhf{}
+    \lhead{\small\truncate{400pt}{\rightmark}}
+    \rhead{\small\hyperref[toc]{Table Of Contents}}
+    \rfoot{Page \thepage}
+    \usepackage{caption}
+    \usepackage{listings}
+    \usepackage{attachfile}
+    \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+    \usepackage{cleveref}
+
+    \usepackage{xcolor}
+    \definecolor{block-gray}{gray}{0.85}
+    \usepackage{environ}
+    \NewEnviron{quoteblock}
+    {\colorbox{block-gray}{
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+    \small\addtolength{\leftskip}{10mm}
+    \addtolength{\rightskip}{10mm}
+    \BODY}}
+    }
+    \renewcommand{\quote}{\quoteblock}
+    \renewcommand{\endquote}{\endquoteblock}
+    \ifdef{\printbibliography}{
+       \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+       \let\oldprintbibliography\printbibliography
+       \renewcommand{\printbibliography}[1]{
+          \phantomsection
+          \addcontentsline{toc}{section}{References}
+          \oldprintbibliography[title={References},heading=subsubbibliography]
+          }
+    }{
+
+    }
+#site: bookdown::bookdown_site
+#documentclass: extarticle
+#geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
+#fontsize: 17pt
+#linestretch: 1.5
+---
+\label{toc}
+
+## Parking Spot Detection from Aerial Images
+The article was written by [@kabak2010parking]. It was was cited [3](https://scholar.google.com/scholar?cites=6373615407951726768&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was predicting occupancy using image segmentation to extract features. They used overall accuracy, recall, precision and specificiy to over the labeled parking spots.
+
+### Hypothesis
+
+Image segmentation provides the necessary means to extract features and apply a machine learning algorithm for binary classification, namely a support vector machine, and achieve good results in occupancy detection. 
+
+### Evidence and Results
+#### Dataset
+Seven images were extracted at 133 feets and 1661x1091 resolution. The authors used Google Earth over Cambridge, UK. From these 7 images parking spots were marked individually, differentiating between 135 available and 215 occupied parking spots for training. For testing, 34 available and 54 occupied images were used.
+
+#### Results
+Given that the data is fairly balanced, occupancy detection is measured through overall accuracy, recall precision and specificity. Confusion matrices for the training and testing sets are also shown.
+
+A second chart shows how accuracy is affected by increasing the minimum segmentation area for the mean shift function. This parameter is the only one that need to be manually tuned. A 200-pixels segmented area was found to be optimal. 
+
+### Contribution
+First, the authors present a list of intuitive eight features to classify the occupancy for each parking spot. Hold-out cross validation was used to filter out 20% of the less useful features.
+
+A second contribution is a method for determining the best features extracted in part with the help of mean shift segmentation. 
+
+Finally, an SVM (LIBLINEAR solver) is used with unsurprising good results. 
+
+### Weaknesses
+First, the authors don't provide the full list of features before pruning. They just provide 8 of the 40 supposedly intuitive features. These results are crucial for extending the feature list and reproducing the papers results.
+
+Nonetheless, the method is susceptible to the minimal segmentation area that has to be set by a human. Upper and lower bounds for calculating the optimal one are not clear from context. An explicit relation between the image _meters per pixel_ resolution would be desirable.
+
+Also, there exist visible correlation between the features, e.g. Luv color is used in three distinct features. Unlike ANNs, SVMs are vulnerable to this kind of correlations. Given that we have more than 3 features using the same latent variable for calculating the separation hyperplane, it won't be useful to normalize.
+
+### Future Work
+The authors doesn't explicitly provide future work hints. However, other type of image preprocessing algorithms based on edge detection could be applied.
+
+Also, future work could include to test other machine learning algorithms, e.g. an ensemble of shallow decision stumps using all the features. This strategy could take care of pruning the most important features without having to explicitly delete them.
+
+Finally, given that the only tested kernel in the SVM was the linear one, future work could include testing other kernels, i.e. the radial basis function kernel.  For the distance metric, Mahalanobis could prove useful to take into account correlations.
