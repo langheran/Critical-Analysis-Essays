@@ -1,0 +1,102 @@
+---
+title: A method of Parking space detection based on image segmentation and LBP
+subtitle:
+author: "[Nisim Hurst](mailto:langheran@gmail.com)"
+date: Thursday 2 May 2019
+abstract: ""
+bibliography: A-method-of-Parking-space-detection-based-on-image-segmentation-and-LBP/A-method-of-Parking-space-detection-based-on-image-segmentation-and-LBP.bib
+urlcolor: blue
+biblio-style: "authoryear" # "apalike" "apa" "authoryear"
+link-citations: true
+csl: ieee.csl
+output:
+  bookdown::pdf_document2:
+    pandoc_args:
+      - "--csl"
+      - "ieee.csl"
+      - "--metadata"
+      - "link-citations"
+      - "--filter"
+      - "pandoc-eqnos"
+    toc: no
+    toc_depth: 5
+    number_sections: no
+    keep_tex: true
+    citation_package: biblatex
+#    includes:
+#      before_body: ../doc-prefix.tex
+header-includes: |
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{subfig}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \usepackage{truncate}
+    \renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+    \fancyhf{}
+    \lhead{\small\truncate{400pt}{\rightmark}}
+    \rhead{\small\hyperref[toc]{Table Of Contents}}
+    \rfoot{Page \thepage}
+    \usepackage{caption}
+    \usepackage{listings}
+    \usepackage{attachfile}
+    \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+    \usepackage{cleveref}
+
+    \usepackage{xcolor}
+    \definecolor{block-gray}{gray}{0.85}
+    \usepackage{environ}
+    \NewEnviron{quoteblock}
+    {\colorbox{block-gray}{
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+    \small\addtolength{\leftskip}{10mm}
+    \addtolength{\rightskip}{10mm}
+    \BODY}}
+    }
+    \renewcommand{\quote}{\quoteblock}
+    \renewcommand{\endquote}{\endquoteblock}
+    \ifdef{\printbibliography}{
+       \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+       \let\oldprintbibliography\printbibliography
+       \renewcommand{\printbibliography}[1]{
+          \phantomsection
+          \addcontentsline{toc}{section}{References}
+          \oldprintbibliography[title={References},heading=subsubbibliography]
+          }
+    }{
+
+    }
+#site: bookdown::bookdown_site
+#documentclass: extarticle
+#geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
+#fontsize: 17pt
+#linestretch: 1.5
+---
+\label{toc}
+
+## A method of Parking space detection based on image segmentation and LBP
+### Abstract
+
+The article was written by [@Lixia_2012] and cited [16](https://scholar.google.com/scholar?cluster=2180601932752364489&hl=en&as_sdt=2005&sciodt=0,5) times according to Google Scholar. It presents a method for detecting occupancy level using a combination of mean shift areas weighted count and LBP code histogram classification through SVM and Markov Random Fields.
+
+### Hypothesis
+Using mean shift segmentation and then LBP code histogram classification using a SVM for texture detection can achieve more than 97% occupancy level detection rate.  
+
+### Evidence and Results
+
+1439 parking spot images were used for training the LBP-based SVM classifier. Then, 1225 test images. Results are presented in a table containing detection rate (TPR), missing rate (FNR) and virtual rate. It is not clear from context what do _virtual rate_ means.
+
+### Contribution
+The most important contribution of this paper is that it demonstrate how to learn a threshold of a number of segments using mean shift segmentation.
+
+A second contribution is the use of LBP histograms to generate a feature code that can be used as input into other classifiers, in this case an SVM. 
+
+### Weaknesses
+This paper is badly written. It depends on pre annotated rectangular areas. These areas are then classified into vacant or occupied.
+
+For the first part, the method must learn a threshold g for each parking space and lighting conditions it encounters. Similar gray levels are assumed between all the parking spots in the camera view.
+
+Finally, the authors mention that occlusions by temporary objects like other vehicles on the traffic lane harm the detection accuracy.
+
+### Future Work
+The authors propose using vehicle tracking in parking spots to overcome occlusions.
