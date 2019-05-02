@@ -1,6 +1,6 @@
 ## Critical Analysis Essays
 
-A repository for storing some of the critical analyses that I have done. 
+A repository for storing some of the critical analyses for papers I have read. 
 
 ### Neural Networks
 
