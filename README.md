@@ -2,7 +2,7 @@
 
 A repository for storing some of the critical analyses for papers I have read. 
 
-### Computer Vision
+### Face Clustering
 
 - [Effective and Generalizable Graph-Based Clustering for Faces in the Wild](Effective-and-Generalizable-Graph-Based-Clustering-for-Faces-in-the-Wild.pdf)
 
@@ -19,7 +19,7 @@ A repository for storing some of the critical analyses for papers I have read.
 - [A Critical Review of Recurrent Neural Networks for Sequence Learning](A-Critical-Review-of-Recurrent-Neural-Networks-for-Sequence.pdf)
 - [LSTM A Search Space Odyssey](LSTM-A-Search-Space-Odyssey.pdf)
 
-### Parking lots literature
+### Parking Lot Segmentation Literature
 
 - [Unsupervised Recognition of Parking Lot Areas](Unsupervised-Recognition-of-Parking-Lot-Areas.pdf)
 - [A Vehicle Parking Detection Method Using Image Segmentation](A-Vehicle-Parking-Detection-Method-Using-Image-Segmentation.pdf)
