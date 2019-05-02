@@ -6,7 +6,7 @@ A repository for storing some of the critical analyses for papers I have read.
 
 - [Effective and Generalizable Graph-Based Clustering for Faces in the Wild](Effective-and-Generalizable-Graph-Based-Clustering-for-Faces-in-the-Wild.pdf)
 
-### Neural Networks [IA5008.1 Sistemas neuronales]
+### Neural Networks
 
 - [Deep learning](Deep-learning.pdf)
 - [Learning internal representations by error propagation](Learning-internal-representations-by-error-propagation.pdf)
@@ -31,3 +31,14 @@ A repository for storing some of the critical analyses for papers I have read.
 - [A Method for Camera Vision Based Parking Spot Detection](A-Method-for-Camera-Vision-Based-Parking-Spot-Detection.pdf)
 - [Extraction of Parking Lot Structure From Aerial Image In Urban Areas](Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.pdf)
 - [Self Supervised Aerial Image Analysis for Extracting Parking Lot Structure](Self-Supervised-Aerial-Image-Analysis-for-Extracting-Parking-Lot-Structure.pdf)
+
+### Quantum Computation
+
+- [Plenty of room at the bottom](Plenty-of-room-at-the-bottom.pdf)
+- [Logical reversibility of computation](Logical-reversibility-of-computation.pdf)
+- [Quantum mechanical computers](Quantum-mechanical-computers.pdf)
+- [The Physical Implementation of Quantum Computation](The-Physical-Implementation-of-Quantum-Computation.pdf)
+- [Information, physics, quantum: The search for links](Information,-physics,-quantum-The-search-for-links.pdf)
+- [A single quantum cannot be cloned](A-single-quantum-cannot-be-cloned.pdf)
+- [Quantum theory, the church–turing principle and the universal quantum computer](Quantum-theory,-the-church–turing-principle-and-the-universal-quantum-computer.pdf)
+- [Machines, logic and quantum physics](Machines,-logic-and-quantum-physics.pdf)
