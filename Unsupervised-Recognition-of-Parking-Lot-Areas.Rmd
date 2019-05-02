@@ -1,0 +1,113 @@
+---
+title: Unsupervised Recognition of Parking Lot Areas
+subtitle:
+author: "[Nisim Hurst](mailto:langheran@gmail.com)"
+date: Thursday 2 May 2019
+abstract: ""
+bibliography: Unsupervised-Recognition-of-Parking-Lot-Areas/Unsupervised-Recognition-of-Parking-Lot-Areas.bib
+urlcolor: blue
+biblio-style: "authoryear" # "apalike" "apa" "authoryear"
+link-citations: true
+csl: ieee.csl
+output:
+  bookdown::pdf_document2:
+    pandoc_args:
+      - "--csl"
+      - "ieee.csl"
+      - "--metadata"
+      - "link-citations"
+      - "--filter"
+      - "pandoc-eqnos"
+    toc: no
+    toc_depth: 5
+    number_sections: no
+    keep_tex: true
+    citation_package: biblatex
+#    includes:
+#      before_body: ../doc-prefix.tex
+header-includes: |
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{subfig}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \usepackage{truncate}
+    \renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+    \fancyhf{}
+    \lhead{\small\truncate{400pt}{\rightmark}}
+    \rhead{\small\hyperref[toc]{Table Of Contents}}
+    \rfoot{Page \thepage}
+    \usepackage{caption}
+    \usepackage{listings}
+    \usepackage{attachfile}
+    \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+    \usepackage{cleveref}
+
+    \usepackage{xcolor}
+    \definecolor{block-gray}{gray}{0.85}
+    \usepackage{environ}
+    \NewEnviron{quoteblock}
+    {\colorbox{block-gray}{
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+    \small\addtolength{\leftskip}{10mm}
+    \addtolength{\rightskip}{10mm}
+    \BODY}}
+    }
+    \renewcommand{\quote}{\quoteblock}
+    \renewcommand{\endquote}{\endquoteblock}
+    \ifdef{\printbibliography}{
+       \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+       \let\oldprintbibliography\printbibliography
+       \renewcommand{\printbibliography}[1]{
+          \phantomsection
+          \addcontentsline{toc}{section}{References}
+          \oldprintbibliography[title={References},heading=subsubbibliography]
+          }
+    }{
+
+    }
+#site: bookdown::bookdown_site
+#documentclass: extarticle
+#geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
+#fontsize: 17pt
+#linestretch: 1.5
+---
+\label{toc}
+
+## Unsupervised Recognition of Parking Lot Areas
+The article was written by [@mexasunsupervised]. It was was cited [0](https://scholar.google.com/scholar?q=Unsupervised%20Recognition%20of%20Parking%20Lot%20Areas%20mexas&hl=en&as_sdt=0&as_vis=1&oi=scholart&sa=X&ved=0ahUKEwiN67qBocbWAhXrjVQKHcX0BYwQgQMIMDAA) times according to Google Scholar. The task performed was pixel segmentation using merging of parking spots and parked vehicles. The used metric was true positive rate (hit rate) over a single parking lot.
+
+### Hypothesis
+Combining parked vehicle and free parking spots detection over high resolution images using morphological operations is enough to recognize parking lot areas without depending on any training method.
+
+### Evidence and Results
+#### Dataset
+A single Brazilian parking lot image was used. It has a resolution of 15 cm per pixel and size of 1000 x 1000 pixels. 
+
+#### Results
+The results are presented in a single table with hit rate, false negative rate and false positive rate for a single image.
+
+### Contribution
+The most important contribution is the enumeration of tunable parameters that can be used to identify parking lot areas without any training. A corollary contribution is the proof that a single image alone (and purportedly simple human tuning) is sufficient to recognize parking lots.
+
+The method is based in the following steps:
+
+1. Identification of parked vehicles.
+   1. Apply morphological operations
+   2. Search using man-made rules
+2. Identification of free parking spots.
+   1. Apply morphological operations
+   2. Search using man-made rules
+3. Hierarchical merging of segmented areas below a pixel Euclidean distance threshold.
+
+All the previous steeps are parametrizable.
+
+### Weaknesses
+The paper obviate comparison by variating the parameter values. Thus, we can assure without loss of precision, that they used human intuition alone. Therefore, the results are not statistically guarantied to be optimal.
+
+However, it constitutes a proof of concept that identifies a properly included set of parameters that can be optimized by an unattended algorithm.
+
+### Future Work
+The title of this work is misleading. Clearly, this work relies heavily on human input for supervising the tuning of all parameters. Any improvement to reduce the number of parameters to be estimated by a human would be highly beneficial.
+
+Also, the authors mention that the system is vulnerable to roof with repetitive patterns, shadows and not parked vehicles. Thus, a probabilistic approach to filter out those cases considering global features of the parking spots could also be developed. 
