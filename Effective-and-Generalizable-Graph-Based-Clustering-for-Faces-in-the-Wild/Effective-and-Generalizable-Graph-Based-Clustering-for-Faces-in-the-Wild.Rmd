@@ -77,7 +77,7 @@ header-includes: |
 \label{toc}
 
 ## Effective and Generalizable Graph-Based Clustering for Faces in the Wild 
-The article was written by [@chang2018]. The task performed was face clustering, i.e. identifying unique face identities. They used Pairwise Fmeasure and BCubed Fmeasure metrics to measure the external quality of the clusters.
+The article was written by [@leonardochang2018]. The task performed was face clustering, i.e. identifying unique face identities. They used Pairwise Fmeasure and BCubed Fmeasure metrics to measure the external quality of the clusters.
 
 ### Hypothesis
 A 128-dimensional face representation obtained by a pretrained ResNet combined with an improved Chinese Whispers (CW) graph clustering algorithm produce results comparable to commercial solutions.
