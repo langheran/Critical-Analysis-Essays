@@ -5,6 +5,7 @@ A repository for storing some of the critical analyses for papers I have read.
 ### Face Clustering
 
 - [Effective and Generalizable Graph-Based Clustering for Faces in the Wild](Effective-and-Generalizable-Graph-Based-Clustering-for-Faces-in-the-Wild.pdf)
+- [Clustering Millions of Faces By Identity](Clustering-Millions-of-Faces-By-Identity.pdf)
 
 ### Neural Networks
 
