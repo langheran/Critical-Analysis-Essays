@@ -1,0 +1,115 @@
+---
+title: A Bayesian Hierarchical Detection Framework for Parking Space Detection
+subtitle:
+author: "[Nisim Hurst](mailto:langheran@gmail.com)"
+date: Thursday 2 May 2019
+abstract: ""
+bibliography: A-Bayesian-Hierarchical-Detection-Framework-for-Parking-Space-Detection/A-Bayesian-Hierarchical-Detection-Framework-for-Parking-Space-Detection.bib
+urlcolor: blue
+biblio-style: "authoryear" # "apalike" "apa" "authoryear"
+link-citations: true
+csl: ieee.csl
+output:
+  bookdown::pdf_document2:
+    pandoc_args:
+      - "--csl"
+      - "ieee.csl"
+      - "--metadata"
+      - "link-citations"
+      - "--filter"
+      - "pandoc-eqnos"
+    toc: no
+    toc_depth: 5
+    number_sections: no
+    keep_tex: true
+    citation_package: biblatex
+#    includes:
+#      before_body: ../doc-prefix.tex
+header-includes: |
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{subfig}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \usepackage{truncate}
+    \renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+    \fancyhf{}
+    \lhead{\small\truncate{400pt}{\rightmark}}
+    \rhead{\small\hyperref[toc]{Table Of Contents}}
+    \rfoot{Page \thepage}
+    \usepackage{caption}
+    \usepackage{listings}
+    \usepackage{attachfile}
+    \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+    \usepackage{cleveref}
+
+    \usepackage{xcolor}
+    \definecolor{block-gray}{gray}{0.85}
+    \usepackage{environ}
+    \NewEnviron{quoteblock}
+    {\colorbox{block-gray}{
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+    \small\addtolength{\leftskip}{10mm}
+    \addtolength{\rightskip}{10mm}
+    \BODY}}
+    }
+    \renewcommand{\quote}{\quoteblock}
+    \renewcommand{\endquote}{\endquoteblock}
+    \ifdef{\printbibliography}{
+       \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+       \let\oldprintbibliography\printbibliography
+       \renewcommand{\printbibliography}[1]{
+          \phantomsection
+          \addcontentsline{toc}{section}{References}
+          \oldprintbibliography[title={References},heading=subsubbibliography]
+          }
+    }{
+
+    }
+#site: bookdown::bookdown_site
+#documentclass: extarticle
+#geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
+#fontsize: 17pt
+#linestretch: 1.5
+---
+\label{toc}
+
+## A Bayesian Hierarchical Detection Framework for Parking Space Detection
+### Abstract
+
+The article was written by [@Ching_Chun_Huang_2008] and cited [36](https://scholar.google.com/scholar?cluster=17702009018238844864&hl=en&as_sdt=2005&sciodt=0,5) times according to Google Scholar. The article strives to segment pixels of a static image through a 3-layer hierarchical Bayesian network method that project 3-dimensional cubes over the individual parking spaces per each row. These 3D projections helps the method overcome environmental and car occlusions.
+
+### Hypothesis
+A three layer Bayesian hierarchical network combined with camera projection parameters can be used to detect occupation level and segment the pixels of individual parking spaces. 
+
+### Evidence and Results
+
+#### Dataset
+A single scene IP camera took photos a different luminance conditions from morning to evening. The authors generated 5000 pseudo examples for training the network based on previous knowledge contained in the semantic layer and on given camera projection parameters.
+
+Test samples consist on 1300 available parking spaces and 1500 occupied spaces.
+
+#### Results
+Only occupancy level detection results are presented in the form of false acceptance (positive) rate and false rejection (negative) rate. It is compared with a SVM which had . While the network was used to do segmentation as well, those results are not provided by the paper.
+
+### Contribution
+The authors propose a 3 layer hierarchical Bayesian network composed of: observation layer, labeling layer and semantic layer. These layers are the building blocks for learning a local classification model, a global semantic model and an adjacency model. For each observation node a different probability model was trained assuming independence. The following are contributions that originate from this architecture:
+
+First, the authors present a way to incorporate previous knowledge of the nature of occlusions and their geometry to build a taxonomy and explicitly tell the network to differentiate car occlusions from environmental occlusions. Each of this likelihood models was built independently. They also include a third taxonomy, namely illumination variability. 
+
+Second, the authors propose a using local global models for learning different feature sets. The local classification model handles classification of each pixel into three classes {car, ground, otherwise}. Luminance and color is also estimated.  For the global semantic model, the authors estimated the box size continuous values by using three independent Gaussians. The center of the parking spot is also estimated using two Gaussians. Occupancy level (discrete) was assumed to be a uniform distribution.
+
+### Weaknesses
+The method is dependent on the camera projection parameters. Also a row by row approach is taken to build single-row rectangular parking blocks and parking spots.
+
+All boxes are assumed to be of the same size in the same scene or by each vehicle. However, the authors mention that they used pretrained means and variances, both for the box sizes and location.
+
+The authors assumed that occupancy status is independent from one parking spot to the other. This is rarely the case, because normally people park near the building entrance.
+
+Finally, the authors doesn't provide results for the pixel by pixel segmentation, neither the dataset they used to reproduce their results. 
+
+### Future Work
+
+Future work could include to detect variable parking block shapes rather that only detecting rows. It would also be useful to model weather conditions along side to illumination changes.
+
+Likewise, the way in which the pseudo samples for training were built is not clear. It would be highly desirable that they could be built automatically for each parking lot and camera perspective.

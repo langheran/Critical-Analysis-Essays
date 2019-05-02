@@ -1,0 +1,198 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={A Bayesian Hierarchical Detection Framework for Parking Space Detection},
+            pdfauthor={Nisim Hurst},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[style=authoryear]{biblatex}
+
+\addbibresource{A-Bayesian-Hierarchical-Detection-Framework-for-Parking-Space-Detection/A-Bayesian-Hierarchical-Detection-Framework-for-Parking-Space-Detection.bib}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{A Bayesian Hierarchical Detection Framework for Parking Space Detection}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{\href{mailto:langheran@gmail.com}{Nisim Hurst}}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{Thursday 2 May 2019}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{truncate}
+\renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+\fancyhf{}
+\lhead{\small\truncate{400pt}{\rightmark}}
+\rhead{\small\hyperref[toc]{Table Of Contents}}
+\rfoot{Page \thepage}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{attachfile}
+\makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage{cleveref}
+
+\usepackage{xcolor}
+\definecolor{block-gray}{gray}{0.85}
+\usepackage{environ}
+\NewEnviron{quoteblock}
+{\colorbox{block-gray}{
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+\small\addtolength{\leftskip}{10mm}
+\addtolength{\rightskip}{10mm}
+\BODY}}
+}
+\renewcommand{\quote}{\quoteblock}
+\renewcommand{\endquote}{\endquoteblock}
+\ifdef{\printbibliography}{
+   \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+   \let\oldprintbibliography\printbibliography
+   \renewcommand{\printbibliography}[1]{
+      \phantomsection
+      \addcontentsline{toc}{section}{References}
+      \oldprintbibliography[title={References},heading=subsubbibliography]
+      }
+}{
+
+}
+
+\begin{document}
+\maketitle
+
+\label{toc}
+
+\hypertarget{a-bayesian-hierarchical-detection-framework-for-parking-space-detection}{%
+\subsection{A Bayesian Hierarchical Detection Framework for Parking Space Detection}\label{a-bayesian-hierarchical-detection-framework-for-parking-space-detection}}
+
+\hypertarget{abstract}{%
+\subsubsection{Abstract}\label{abstract}}
+
+The article was written by \autocite{Ching_Chun_Huang_2008} and cited \href{https://scholar.google.com/scholar?cluster=17702009018238844864\&hl=en\&as_sdt=2005\&sciodt=0,5}{36} times according to Google Scholar. The article strives to segment pixels of a static image through a 3-layer hierarchical Bayesian network method that project 3-dimensional cubes over the individual parking spaces per each row. These 3D projections helps the method overcome environmental and car occlusions.
+
+\hypertarget{hypothesis}{%
+\subsubsection{Hypothesis}\label{hypothesis}}
+
+A three layer Bayesian hierarchical network combined with camera projection parameters can be used to detect occupation level and segment the pixels of individual parking spaces.
+
+\hypertarget{evidence-and-results}{%
+\subsubsection{Evidence and Results}\label{evidence-and-results}}
+
+\hypertarget{dataset}{%
+\paragraph{Dataset}\label{dataset}}
+
+A single scene IP camera took photos a different luminance conditions from morning to evening. The authors generated 5000 pseudo examples for training the network based on previous knowledge contained in the semantic layer and on given camera projection parameters.
+
+Test samples consist on 1300 available parking spaces and 1500 occupied spaces.
+
+\hypertarget{results}{%
+\paragraph{Results}\label{results}}
+
+Only occupancy level detection results are presented in the form of false acceptance (positive) rate and false rejection (negative) rate. It is compared with a SVM which had . While the network was used to do segmentation as well, those results are not provided by the paper.
+
+\hypertarget{contribution}{%
+\subsubsection{Contribution}\label{contribution}}
+
+The authors propose a 3 layer hierarchical Bayesian network composed of: observation layer, labeling layer and semantic layer. These layers are the building blocks for learning a local classification model, a global semantic model and an adjacency model. For each observation node a different probability model was trained assuming independence. The following are contributions that originate from this architecture:
+
+First, the authors present a way to incorporate previous knowledge of the nature of occlusions and their geometry to build a taxonomy and explicitly tell the network to differentiate car occlusions from environmental occlusions. Each of this likelihood models was built independently. They also include a third taxonomy, namely illumination variability.
+
+Second, the authors propose a using local global models for learning different feature sets. The local classification model handles classification of each pixel into three classes \{car, ground, otherwise\}. Luminance and color is also estimated. For the global semantic model, the authors estimated the box size continuous values by using three independent Gaussians. The center of the parking spot is also estimated using two Gaussians. Occupancy level (discrete) was assumed to be a uniform distribution.
+
+\hypertarget{weaknesses}{%
+\subsubsection{Weaknesses}\label{weaknesses}}
+
+The method is dependent on the camera projection parameters. Also a row by row approach is taken to build single-row rectangular parking blocks and parking spots.
+
+All boxes are assumed to be of the same size in the same scene or by each vehicle. However, the authors mention that they used pretrained means and variances, both for the box sizes and location.
+
+The authors assumed that occupancy status is independent from one parking spot to the other. This is rarely the case, because normally people park near the building entrance.
+
+Finally, the authors doesn't provide results for the pixel by pixel segmentation, neither the dataset they used to reproduce their results.
+
+\hypertarget{future-work}{%
+\subsubsection{Future Work}\label{future-work}}
+
+Future work could include to detect variable parking block shapes rather that only detecting rows. It would also be useful to model weather conditions along side to illumination changes.
+
+Likewise, the way in which the pseudo samples for training were built is not clear. It would be highly desirable that they could be built automatically for each parking lot and camera perspective.
+
+\printbibliography
+
+
+\end{document}
