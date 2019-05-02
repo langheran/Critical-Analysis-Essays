@@ -14,4 +14,5 @@ A repository for storing some of the critical analyses for papers I have read.
 - [Deep sparse rectifier neural networks](Deep-Sparse-Rectifier-Neural-Networks.pdf)
 - [Dropout: a Simple Way to Prevent Neural Networks from Overfitting](Dropout-a-Simple-Way-to-Prevent-Neural-Networks-from-Overfitting.pdf)
 - [Adam: A Method for Stochastic Optimization](Adam-A-Method-for-Stochastic-Optimization.pdf)
-- [ImageNet Classification with Deep Convolutional Neural Networks](ImageNet Classification with Deep Convolutional Neural Networks.pdf)
+- [ImageNet Classification with Deep Convolutional Neural Networks](ImageNet-Classification-with-Deep-Convolutional-Neural-Networks.pdf)
+- 
