@@ -15,4 +15,4 @@ A repository for storing some of the critical analyses for papers I have read.
 - [Dropout: a Simple Way to Prevent Neural Networks from Overfitting](Dropout-a-Simple-Way-to-Prevent-Neural-Networks-from-Overfitting.pdf)
 - [Adam: A Method for Stochastic Optimization](Adam-A-Method-for-Stochastic-Optimization.pdf)
 - [ImageNet Classification with Deep Convolutional Neural Networks](ImageNet-Classification-with-Deep-Convolutional-Neural-Networks.pdf)
-- 
+- [Very Deep Convolutional Networks for Large-scale Image Recognition](Very-Deep-Convolutional-Networks-for-Large-scale-Image-Recognition.pdf)
