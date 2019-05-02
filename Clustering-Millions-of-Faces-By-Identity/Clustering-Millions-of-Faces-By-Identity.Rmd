@@ -79,7 +79,7 @@ header-includes: |
 The article was written by [@otto2018]. It was was cited [44](https://scholar.google.com/scholar?cites=9743611198042490448&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was face clustering. They used the F-measure metric over clusters with distractor images.
 
 ### Hypothesis
-The Rank-Order cluster proposed by [@]
+The Rank-Order cluster proposed by [@].
 
 ### Evidence and Results
 
@@ -88,6 +88,8 @@ The Rank-Order cluster proposed by [@]
 #### Results
 
 ### Contribution
+
+The network architecture is VGG16 proposed by [@Simonyan2014].
 
 ### Weaknesses
 
