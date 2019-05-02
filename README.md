@@ -12,3 +12,4 @@ A repository for storing some of the critical analyses for papers I have read.
 - [Learning internal representations by error propagation](Learning-internal-representations-by-error-propagation.pdf)
 - [A fast learning algorithm for deep belief nets](A-fast-learning-algorithm-for-deep-belief-nets.pdf)
 - [Deep sparse rectifier neural networks](Deep-Sparse-Rectifier-Neural-Networks.pdf)
+- [Dropout a Simple Way to Prevent Neural Networks from Overfitting](Dropout-a-Simple-Way-to-Prevent-Neural-Networks-from-Overfitting.pdf)
