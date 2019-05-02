@@ -16,5 +16,4 @@ A repository for storing some of the critical analyses for papers I have read.
 - [Adam: A Method for Stochastic Optimization](Adam-A-Method-for-Stochastic-Optimization.pdf)
 - [ImageNet Classification with Deep Convolutional Neural Networks](ImageNet-Classification-with-Deep-Convolutional-Neural-Networks.pdf)
 - [Very Deep Convolutional Networks for Large-scale Image Recognition](Very-Deep-Convolutional-Networks-for-Large-scale-Image-Recognition.pdf)
-- [A Critical Review of Recurrent Neural Networks for Sequence
-Learning](A-Critical-Review-of-Recurrent-Neural-Networks-for-Sequence.pdf)
+- [A Critical Review of Recurrent Neural Networks for Sequence Learning](A-Critical-Review-of-Recurrent-Neural-Networks-for-Sequence.pdf)
