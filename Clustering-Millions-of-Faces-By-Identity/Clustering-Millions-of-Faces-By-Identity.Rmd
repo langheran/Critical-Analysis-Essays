@@ -95,7 +95,7 @@ For datasets were tested:
 | LFW    | 13233 images of 5749. Only 1680 subjects have two or more photos. | ??, variable head angle |                         Color, different Poses and Backgrounds.| [@huang2008]   |
 | YTF    | 3425 videos of 1595 subjects.                                     |      100x100, variable enclosing area      |            Color, different Poses and Backgrounds.                  | [@wolf2011]    |
 | Webfaces |     123,654,141 distractor images.                                   |     N/A       | N/A | [@otto2018] |
-| CASIA-webface     | 3200 of 126 subjects.                                             | 120x165    | Color, Frontal.           | [@mart1998]    |
+| CASIA-webface     | 494,414 images of 10,575 subjects.                                             | 120x165    | Color, different Poses and Backgrounds.           | [@yi2014]    |
 : \label{tab:table1} Main characteristics of the four datasets that were used to test the improved CW.
 
 \normalsize
