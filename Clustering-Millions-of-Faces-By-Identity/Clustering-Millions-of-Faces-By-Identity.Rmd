@@ -108,8 +108,7 @@ Firstly, the authors improved the Rank-Order clustering algorithm proposed by [@
 
 Secondly, the authors improved the internal quality metric of Modularization quality (MQ) [@mancoridis1998] by just counting shared neighbors in the top-k nearest neighbors list. Cluster's external quality was obviated.
 
-
-
+Thirdly
 ### Weaknesses
 
 ### Future Work
