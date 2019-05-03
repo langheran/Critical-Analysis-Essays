@@ -91,7 +91,7 @@ The network architecture to produce a 320D feature vector was VGG16 proposed by 
 
 ### Contribution
 
-A first contribution of this paper stems from an improvement of the clustering algorithm. The Rank-Order cluster proposed by [@zhu2011] has the disadvantage that it requires $O(n^2)$. The authors propose to use the FLANN library implementation of the randomized k-d tree algorithm to  compute the list of nearest neighbors.
+A first contribution of this paper stems from an improvement of the clustering algorithm. The Rank-Order cluster proposed by [@zhu2011] has the disadvantage that it requires $O(n^2)$. The authors propose to use the FLANN library implementation of the randomized k-d tree algorithm to compute the list of top-k nearest neighbors.
 
 
 ### Weaknesses
