@@ -79,7 +79,9 @@ header-includes: |
 The article was written by [@otto2018]. It was was cited [44](https://scholar.google.com/scholar?cites=9743611198042490448&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was face clustering. They used the F-measure metric over clusters with distractor images.
 
 ### Hypothesis
-A neuronal network face representation  
+A neuronal network face representation . 
+
+The network architecture is VGG16 proposed by [@Simonyan2014], however the method .
 
 ### Evidence and Results
 
@@ -91,7 +93,6 @@ A neuronal network face representation
 
 A first contribution of this paper stems from an improvement of the clustering algorithm. The Rank-Order cluster proposed by [@zhu2011] has the disadvantage that it requires $O(n^2)$. The authors propose to use the FLANN library implementation of the randomized k-d tree algorithm to  compute the list of nearest neighbors.
 
-The network architecture is VGG16 proposed by [@Simonyan2014].
 
 ### Weaknesses
 
