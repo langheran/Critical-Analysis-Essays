@@ -81,7 +81,7 @@ The article was written by [@otto2018]. It was was cited [44](https://scholar.go
 ### Hypothesis
 Deep features clustered using only the top-k nearest neighbors in rank-order clustering will produce a more scalable and a more accurate face clustering algorithm. This algorithm will be able to overcome the presence of millions distractor images and class imbalance.
 
-The network architecture to produce a 320D feature vector was VGG16 proposed by [@Simonyan2014]. The rank-order clustering algorithm is based on [@zhu2011]. The k-d tree for calculating just the 200-top nearest neighbors is based on [@muja2014]. 
+The network architecture to produce a 320D feature vector was VGG16 proposed by [@Simonyan2014]. The rank-order clustering algorithm is based on [@zhu2011]. Their k-d tree implementation for calculating just the 200-top nearest neighbors is based on [@muja2014]. 
 
 ### Evidence and Results
 Evidence is presented first over a small dataset and the over an augmented version of the datasets with million of distractor images.
