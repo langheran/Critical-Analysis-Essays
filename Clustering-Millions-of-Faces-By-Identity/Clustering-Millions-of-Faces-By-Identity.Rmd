@@ -79,7 +79,7 @@ header-includes: |
 The article was written by [@otto2018]. It was was cited [44](https://scholar.google.com/scholar?cites=9743611198042490448&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was face clustering. They used the F-measure metric over clusters with distractor images.
 
 ### Hypothesis
-Deep features clustered using only the top-k nearest neighbors in rank-order clustering will produce a faster face clustering algorithm.
+Deep features clustered using only the top-k nearest neighbors in rank-order clustering will produce a more scalable and a more accurate face clustering algorithm.
 
 The network architecture to produce a 320D feature vector was VGG16 proposed by [@Simonyan2014].
 
