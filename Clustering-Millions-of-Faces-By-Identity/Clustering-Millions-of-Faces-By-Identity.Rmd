@@ -87,8 +87,18 @@ The network architecture to produce a 320D feature vector was VGG16 proposed by 
 Evidence is presented first over a small dataset and the over an augmented version of the datasets with million of distractor images.
 
 #### Dataset
+For datasets were tested:
 
+\small
+|        |                            # Instances                            | Resolution |          Scenery          |     Author     |
+| ------ | ----------------- | ---------- | ------------- | -------------- |
+| LFW    | 13233 images of 5749. Only 1680 subjects have two or more photos. | ??, variable head angle |                         Color, different Poses and Backgrounds.| [@huang2008]   |
+| YTF    | 3425 videos of 1595 subjects.                                     |      100x100, variable enclosing area      |            Color, different Poses and Backgrounds.                  | [@wolf2011]    |
+| EYaleB | 1710 images of 38 subjects.                                       |     168x192       | Black and White, Frontal. | [@sanchez2006] |
+| AR     | 3200 of 126 subjects.                                             | 120x165    | Color, Frontal.           | [@mart1998]    |
+: \label{tab:table1} Main characteristics of the four datasets that were used to test the improved CW.
 
+\normalsize
 
 #### Results
 
