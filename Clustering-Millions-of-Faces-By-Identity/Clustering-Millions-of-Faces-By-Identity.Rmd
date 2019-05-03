@@ -2,7 +2,7 @@
 title: Clustering Millions of Faces By Identity
 subtitle:
 author: "[Nisim Hurst](mailto:langheran@gmail.com)"
-date: Thursday 2 May 2019
+date: Friday 3 May 2019
 abstract: ""
 bibliography: Clustering-Millions-of-Faces-By-Identity/Clustering-Millions-of-Faces-By-Identity.bib
 urlcolor: blue
@@ -79,7 +79,7 @@ header-includes: |
 The article was written by [@otto2018]. It was was cited [44](https://scholar.google.com/scholar?cites=9743611198042490448&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was face clustering. They used the F-measure metric over clusters with distractor images.
 
 ### Hypothesis
-A neuronal network face representation.
+Deep features clustered using only the top-k nearest neighbors in rank-order clustering will produce a faster face clustering algorithm.
 
 The network architecture is VGG16 proposed by [@Simonyan2014], however the method .
 
