@@ -81,7 +81,7 @@ The article was written by [@otto2018]. It was was cited [44](https://scholar.go
 ### Hypothesis
 Deep features clustered using only the top-k nearest neighbors in rank-order clustering will produce a faster face clustering algorithm.
 
-The network architecture is VGG16 proposed by [@Simonyan2014], however the method .
+The network architecture to produce a 320D feature vector was VGG16 proposed by [@Simonyan2014].
 
 ### Evidence and Results
 
