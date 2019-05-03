@@ -76,7 +76,7 @@ header-includes: |
 
 ## Clustering Millions of Faces by Identity
 
-The article was written by [@otto2018]. It was was cited [44](https://scholar.google.com/scholar?cites=9743611198042490448&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was face clustering. They used the F-measure metric over clusters with distractor images.
+The article was written by [@otto2018]. It was was cited [44](https://scholar.google.com/scholar?cites=9743611198042490448&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was face clustering. They used the F-measure metric over clusters with distractor images. They also developed their own metric for measuring internal cluster quality using just the k-top nearest neighbors.
 
 ### Hypothesis
 Deep features clustered using only the top-k nearest neighbors in rank-order clustering will produce a more scalable and a more accurate face clustering algorithm. This algorithm will be able to overcome the presence of millions distractor images and class imbalance.
