@@ -119,7 +119,7 @@ Thirdly, the authors provide an augmented dataset as a matter of baseline to ass
 ### Weaknesses
 The method uses a representation that needs to be distributed in chunks across servers, each one process about a million image instances. However, the authors don't provide an efficient algorithm for merging the results nor prove that the algorithm is unaffected in single-thread environments.
 
-Also, the method is dependent of a $k$ that probably depends on the number of instances, but the authors don't specify how $k$  should be modified. 
+Also, the method is dependent of a $k$ that depends on the number of instances, but the authors don't specify how $k$  should be modified. They tested with different  
 
 ### Future Work
 
