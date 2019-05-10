@@ -104,6 +104,10 @@ The feature extractor was trained with the CASIA-webface. LFW, YTF were used for
 
 First, the authors present Pairwise F-measure evaluated in the LFW dataset without any distractor images.
 
+Also, the authors present the results of the algorithm using a sample of 3 frames per video in contrast to the results obtained over all the frames.
+
+Finally, 
+
 ### Contribution
 
 Firstly, the authors improved the Rank-Order clustering algorithm proposed by [@zhu2011]. The original Rank-Order has the disadvantage that it requires $O(n^2)$. The authors propose to use the FLANN library implementation of the randomized k-d tree algorithm to compute the list of top-k nearest neighbors. Just one iteration is used.
