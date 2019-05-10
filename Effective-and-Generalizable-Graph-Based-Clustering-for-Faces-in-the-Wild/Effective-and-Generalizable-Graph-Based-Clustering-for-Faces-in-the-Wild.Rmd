@@ -2,7 +2,7 @@
 title: Effective and Generalizable Graph-Based Clustering for Faces in the Wild
 subtitle:
 author: "[Nisim Hurst](mailto:langheran@gmail.com)"
-date: Friday 3 May 2019
+date: Friday 10 May 2019
 abstract: ""
 bibliography: Effective-and-Generalizable-Graph-Based-Clustering-for-Faces-in-the-Wild/Effective-and-Generalizable-Graph-Based-Clustering-for-Faces-in-the-Wild.bib
 urlcolor: blue
@@ -68,11 +68,11 @@ header-includes: |
     }
     \usepackage{mathtools}
     \usepackage[export]{adjustbox}
-#site: bookdown::bookdown_site
-#documentclass: extarticle
-#geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
-#fontsize: 17pt
-#linestretch: 1.5
+site: bookdown::bookdown_site
+documentclass: extarticle
+geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
+fontsize: 17pt
+linestretch: 1.5
 ---
 \label{toc}
 
