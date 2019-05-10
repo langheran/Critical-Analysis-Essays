@@ -84,7 +84,7 @@ Deep features clustered using only the top-k nearest neighbors in rank-order clu
 The network architecture to produce a 320D feature vector was VGG16 proposed by [@Simonyan2014]. The rank-order clustering algorithm is based on [@zhu2011]. Their k-d tree implementation for calculating just the 200-top nearest neighbors is based on [@muja2014]. 
 
 ### Evidence and Results
-Evidence is presented first over a small dataset and the over an augmented version of the datasets with million of distractor images.
+Evidence is presented first over a small dataset and the over an augmented version of the datasets with millions of distractor images.
 
 #### Dataset
 The feature extractor was trained with the CASIA-webface. LFW, YTF were used for cluster evaluation, the former over static images and the latter over videos. Webfaces was used to augment the  LFW. Here is a brief description of each:
@@ -117,7 +117,7 @@ Secondly, the authors improved the internal quality metric of Modularization qua
 Thirdly, the authors provide an augmented dataset as a matter of baseline to assess the accuracy of the algorithm under the effect of distractor images that are out of the face clusters.
 
 ### Weaknesses
-
+The method uses a representation that needs to be distributed in chunks across servers, each one process about a million image instances. 
 
 ### Future Work
 

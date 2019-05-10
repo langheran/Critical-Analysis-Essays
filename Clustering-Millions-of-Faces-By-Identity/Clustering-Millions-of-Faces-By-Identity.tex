@@ -154,7 +154,7 @@ The network architecture to produce a 320D feature vector was VGG16 proposed by 
 \hypertarget{evidence-and-results}{%
 \subsubsection{Evidence and Results}\label{evidence-and-results}}
 
-Evidence is presented first over a small dataset and the over an augmented version of the datasets with million of distractor images.
+Evidence is presented first over a small dataset and the over an augmented version of the datasets with millions of distractor images.
 
 \hypertarget{dataset}{%
 \paragraph{Dataset}\label{dataset}}
@@ -262,6 +262,8 @@ Thirdly, the authors provide an augmented dataset as a matter of baseline to ass
 
 \hypertarget{weaknesses}{%
 \subsubsection{Weaknesses}\label{weaknesses}}
+
+The method uses a representation that needs to be distributed in chunks across servers, each one process about a million image instances.
 
 \hypertarget{future-work}{%
 \subsubsection{Future Work}\label{future-work}}
