@@ -121,4 +121,6 @@ The method uses a representation that needs to be distributed in chunks across s
 
 ### Future Work
 
-Otto mentions that it would be beneficial to enforce pairwise constraints like must-link and cannot-link. 
+Otto mentions that the dimensional vector representation could be improved through a better deep model architect that perform better on profile/side faces. 
+
+It would be beneficial to enforce pairwise constraints like must-link and cannot-link. Also the authors 
