@@ -106,7 +106,7 @@ First, the authors present Pairwise F-measure evaluated in the LFW dataset witho
 
 Also, given that having a high number of similar frames on each video can affect grouping identities between videos, the authors present the results of the algorithm using a sample of 3 frames per video in contrast to the results obtained over all the frames. 
 
-Finally, the authors presents a a
+Finally, the authors presents 
 
 ### Contribution
 
@@ -117,6 +117,8 @@ Secondly, the authors improved the internal quality metric of Modularization qua
 Thirdly, the authors provide an augmented dataset as a matter of baseline to assess the accuracy of the algorithm under the effect of distractor images that are out of the face clusters.
 
 ### Weaknesses
+
+
 
 ### Future Work
 
