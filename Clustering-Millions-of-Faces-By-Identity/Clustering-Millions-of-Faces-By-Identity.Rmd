@@ -104,7 +104,7 @@ The feature extractor was trained with the CASIA-webface. LFW, YTF were used for
 
 First, the authors present Pairwise F-measure evaluated in the LFW dataset without any distractor images.
 
-Also, the authors present the results of the algorithm using a sample of 3 frames per video in contrast to the results obtained over all the frames.
+Also, given that the clustering on videos is skewed towards the authors present the results of the algorithm using a sample of 3 frames per video in contrast to the results obtained over all the frames. 
 
 Finally, the authors 
 
