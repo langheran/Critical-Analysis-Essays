@@ -2,7 +2,7 @@
 title: Clustering Millions of Faces By Identity
 subtitle:
 author: "[Nisim Hurst](mailto:langheran@gmail.com)"
-date: Thursday 9 May 2019
+date: Friday 10 May 2019
 abstract: ""
 bibliography: Clustering-Millions-of-Faces-By-Identity/Clustering-Millions-of-Faces-By-Identity.bib
 urlcolor: blue
@@ -101,6 +101,8 @@ The feature extractor was trained with the CASIA-webface. LFW, YTF were used for
 \normalsize
 
 #### Results
+
+First, the authors present 
 
 ### Contribution
 
