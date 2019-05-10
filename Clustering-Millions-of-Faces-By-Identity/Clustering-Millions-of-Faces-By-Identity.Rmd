@@ -102,7 +102,7 @@ The feature extractor was trained with the CASIA-webface. LFW, YTF were used for
 
 #### Results
 
-First, the authors present Pairwise F-measure 
+First, the authors present Pairwise F-measure evaluated in the LFW dataset without any distractor images.
 
 ### Contribution
 
