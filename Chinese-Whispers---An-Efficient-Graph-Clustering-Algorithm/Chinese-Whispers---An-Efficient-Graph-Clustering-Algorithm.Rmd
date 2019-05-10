@@ -66,11 +66,11 @@ header-includes: |
     }{
 
     }
-#site: bookdown::bookdown_site
-#documentclass: extarticle
-#geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
-#fontsize: 17pt
-#linestretch: 1.5
+site: bookdown::bookdown_site
+documentclass: extarticle
+geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
+fontsize: 17pt
+linestretch: 1.5
 ---
 \label{toc}
 
