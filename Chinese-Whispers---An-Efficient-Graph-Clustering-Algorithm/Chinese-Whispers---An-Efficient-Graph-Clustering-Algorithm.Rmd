@@ -104,7 +104,11 @@ The authors propose
                 \State class($v_i$) $\gets i$
             \EndForeach
             \While{$maxiterations>0$}
-                \State $maxiterations \gets maxiterations-1$ 
+                \State $vertexlist \gets shuffle(G.V)$
+                \Foreach{$v \in vertexlist$}
+                    \State $class(v)\gets argmax_{c \in Neighbors(v)}[\sum_{i \in Neighbors(v)}\mathbb{I}(i,c)]$
+                \EndForeach
+                \State $maxiterationsp \gets maxiterations-1$
             \EndWhile
             \State\Return ClusterAssignments
 		\EndProcedure
