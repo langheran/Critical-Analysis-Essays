@@ -2,7 +2,7 @@
 title: Clustering Millions of Faces By Identity
 subtitle:
 author: "[Nisim Hurst](mailto:langheran@gmail.com)"
-date: Friday 10 May 2019
+date: Monday 13 May 2019
 abstract: ""
 bibliography: Clustering-Millions-of-Faces-By-Identity/Clustering-Millions-of-Faces-By-Identity.bib
 urlcolor: blue
