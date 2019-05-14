@@ -172,7 +172,7 @@ The authors propose
         \INPUT{An initial graph $G$ of $V$ multidimensional vectors to be clustered.}
         \OUTPUT{An assignment of the clusters for each vertex $\in$ $ G.V $}
         \Procedure{ChineseWhispers}{$G$}
-            \Foreach{}
+            \Foreach{ vertex $(i, v) \in enum(G.V)$}
 
             \EndForeach
             \State\Return ClusterAssignments
