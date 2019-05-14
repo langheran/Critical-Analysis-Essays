@@ -103,8 +103,8 @@ The authors propose
             \Foreach{ vertex $(i, v) \in enum(G.V)$}
                 \State class($v_i$) $\gets i$
             \EndForeach
-            \While{maxiterations}
-
+            \While{$maxiterations>0$}
+                \State $maxiterations \gets maxiterations-1$ 
             \EndWhile
             \State\Return ClusterAssignments
 		\EndProcedure
