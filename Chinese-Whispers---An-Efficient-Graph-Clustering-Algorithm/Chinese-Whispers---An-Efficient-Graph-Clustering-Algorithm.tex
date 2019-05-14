@@ -178,7 +178,7 @@ The authors propose
             \While{$maxiterations>0$}
                 \State $vertexlist \gets shuffle(G.V)$
                 \Foreach{$v \in vertexlist$}
-                    \State $class(v)\gets \operatorname*{argmax}_{\theta}[\sum_{c \in Neighbors(v)}\mathbb{I}(c,\theta)]$
+                    \State class$(v)\gets \operatorname*{argmax}_{\theta}[\sum_{c \in Neighbors(v)}\mathbb{I}(c,\theta)]$
                 \EndForeach
                 \State $maxiterationsp \gets maxiterations-1$
             \EndWhile
