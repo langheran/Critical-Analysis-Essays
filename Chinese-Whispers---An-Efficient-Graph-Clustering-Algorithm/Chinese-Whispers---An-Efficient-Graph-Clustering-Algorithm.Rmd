@@ -85,11 +85,15 @@ A randomized graph-clustering algorithm would perform well of small worlds.
 
 #### Dataset
 
+The dataset used are all from the natural language processing world. 
+
 #### Results
 
 ### Contribution
 
 The authors propose 
+
+Small world graphs 
 
 ### Controversial Ideas
 
