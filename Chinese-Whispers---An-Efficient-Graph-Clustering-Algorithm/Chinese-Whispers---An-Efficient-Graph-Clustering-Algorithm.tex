@@ -169,12 +169,15 @@ The authors propose
 \begin{algorithm}[H]
     \caption{Chinese Whispers}\label{al1}
     \begin{algorithmic}[1]
-        \INPUT{An initial graph $G$ of $V$ multidimensional vectors to be clustered.}
+        \INPUT{An initial graph $G$ of $V$ multidimensional vectors to be clustered; A maximum number of iterations $maxiterations$ }
         \OUTPUT{An assignment of the clusters for each vertex $\in$ $ G.V $}
         \Procedure{ChineseWhispers}{$G$}
             \Foreach{ vertex $(i, v) \in enum(G.V)$}
                 \State class($v_i$) $\gets i$
             \EndForeach
+            \While{maxiterations}
+
+            \EndWhile
             \State\Return ClusterAssignments
         \EndProcedure
     \end{algorithmic}
