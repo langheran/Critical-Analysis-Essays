@@ -129,4 +129,6 @@ Also, the method is dependent of a $k$ that depends on the number of instances, 
 
 Otto et al. mentions that the dimensional vector representation could be improved through a better deep model architect that perform better on profile/side faces or using a bigger dataset. 
 
+Second, he propose to implement different methods for nearest neighbor extraction, that could perform faster or have more generalization power. A parameter-less method would also be a great candidate here to make the method resilient to cases were the total distractor images proportion is unknown. 
+
 Finally, he also proposes to enforce pairwise constraints like must-link and cannot-link.
