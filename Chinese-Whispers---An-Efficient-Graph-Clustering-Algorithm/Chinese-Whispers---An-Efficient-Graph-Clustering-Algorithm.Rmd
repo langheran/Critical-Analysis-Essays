@@ -2,7 +2,7 @@
 title: Chinese Whispers - An Efficient Graph Clustering Algorithm
 subtitle:
 author: "[Nisim Hurst](mailto:langheran@gmail.com)"
-date: Friday 10 May 2019
+date: Tuesday 14 May 2019
 abstract: ""
 bibliography: Chinese-Whispers---An-Efficient-Graph-Clustering-Algorithm/Chinese-Whispers---An-Efficient-Graph-Clustering-Algorithm.bib
 urlcolor: blue
@@ -78,6 +78,8 @@ linestretch: 1.5
 The article was written by [@biemann2006]. It was was cited [303](https://scholar.google.com/scholar?cites=11936713141221423099&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was x. They used x metric over x.
 
 ### Hypothesis
+
+An 
 
 ### Evidence and Results
 
