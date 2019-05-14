@@ -167,15 +167,12 @@ The dataset used are all from the natural language processing world.
 The authors propose
 
 \begin{algorithm}[H]
-    \caption{Chinese Whispers clustering subject to pairwise constraints}\label{al1}
+    \caption{Chinese Whispers}\label{al1}
     \begin{algorithmic}[1]
-        \INPUT{An initial graph $G$ of $V$ multidimensional vectors to be clustered, the must-link pairs symmetric relations  $ ML=\{ (V_i, V_j)| i\neq j \cap C(V_i) = C(V_j)\}$ and $ CL=\{ (V_i, V_j)| i\neq j \cap C(V_i) \neq C(V_j)\}$}
+        \INPUT{An initial graph $G$ of $V$ multidimensional vectors to be clustered.}
         \OUTPUT{An assignment of the clusters for each vertex $\in$ $ G.V $}
-        \Procedure{ConstrainedCW}{$G$,$ML$,$CL$}
-            \State MustLink $\gets$ Connected-Components($G.V$, $ML$)
-      \State CannotLink $\gets$ Connected-Components($G.V$, $CL$)
-      \State CWWrapper(\&$G$,$MustLink$,$CannotLink$)
-      \State\Return ClusterAssignments
+        \Procedure{ChineseWhispers}{$G$}
+            \State\Return ClusterAssignments
         \EndProcedure
     \end{algorithmic}
 \end{algorithm}
