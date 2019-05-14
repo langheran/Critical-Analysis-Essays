@@ -110,7 +110,7 @@ The authors propose
                 \EndForeach
                 \State $maxiterationsp \gets maxiterations-1$
             \EndWhile
-            \State\Return ClusterAssignments
+            \State\Return class
 		\EndProcedure
 	\end{algorithmic}
 \end{algorithm}
