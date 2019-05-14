@@ -110,7 +110,7 @@ Finally, the authors presents
 
 ### Contribution
 
-Firstly, the authors improved the Rank-Order clustering algorithm proposed by [@zhu2011]. The original Rank-Order has the disadvantage that it requires $O(n^2)$. The authors propose to use the FLANN library implementation of the randomized k-d tree algorithm to compute the list of top-k nearest neighbors [@hartley2008]. Just one iteration is used. This approximate version had better performance compared to the exact rank-order algorithm proposed in .
+Firstly, the authors improved the Rank-Order clustering algorithm proposed by [@zhu2011]. The original Rank-Order has the disadvantage that it requires $O(n^2)$. The authors propose to use the FLANN library implementation of the randomized k-d tree algorithm to compute the list of top-k nearest neighbors [@hartley2008]. Just one iteration is used. This approximate version had better performance compared to the exact rank-order.
 
 Secondly, the authors improved the internal quality metric of Modularization quality (MQ) [@mancoridis1998] by just counting shared neighbors in the top-k nearest neighbors list. Cluster's external quality was obviated.
 
