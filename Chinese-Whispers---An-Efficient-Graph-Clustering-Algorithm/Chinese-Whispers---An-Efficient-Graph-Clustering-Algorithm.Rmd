@@ -75,11 +75,11 @@ linestretch: 1.5
 \label{toc}
 
 ## Chinese Whispers - An Efficient Graph Clustering Algorithm
-The article was written by [@biemann2006]. It was was cited [303](https://scholar.google.com/scholar?cites=11936713141221423099&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was x. They used x metric over x.
+The article was written by [@biemann2006]. It was was cited [303](https://scholar.google.com/scholar?cites=11936713141221423099&as_sdt=2005&sciodt=0,5&hl=en) times according to Google Scholar. The task performed was graph-clustering. They used x metric over x.
 
 ### Hypothesis
 
-An 
+A randomized graph-clustering algorithm would perform well of small worlds.
 
 ### Evidence and Results
 
@@ -88,6 +88,8 @@ An
 #### Results
 
 ### Contribution
+
+The authors propose 
 
 ### Controversial Ideas
 
