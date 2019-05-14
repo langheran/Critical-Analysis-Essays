@@ -106,7 +106,7 @@ First, the authors present Pairwise F-measure evaluated in the LFW dataset witho
 
 Second, the authors show performance on the augmented LFW dataset and the decay rate of each algorithm under these conditions. The proposed algorithm shows the highest resiliency compared to the decays ensued in the other algorithm. 
 
-
+Having benchmarked the algorithm in contrast to the other methods, the authors estimate internal performance under increasing levels of distractor images. 
 
 Also, given that having a high number of similar frames on each video can affect grouping identities between videos, the authors present the results of the algorithm using a sample of 3 frames per video in contrast to the results obtained over all the frames. 
 
