@@ -66,19 +66,7 @@ header-includes: |
     }{
 
     }
-    \usepackage{amsmath}
-    \usepackage{algorithm}
-    \usepackage{algpseudocode}
-    \algnewcommand\algorithmicinput{\textbf{Input:}}
-    \algnewcommand\INPUT{\item[\algorithmicinput]}
-    \algnewcommand\algorithmicoutput{\textbf{Output:}}
-    \algnewcommand\OUTPUT{\item[\algorithmicoutput]}
-    \let\emptyset\varnothing
-    \algblockdefx[Foreach]{Foreach}{EndForeach}[1]{\textbf{for each} #1 \textbf{do}}{\textbf{end for}}
-    \makeatletter
-    \ifthenelse{\equal{\ALG@noend}{t}}{\algtext*{EndForeach}}{}
-    \def\BState{\State\hskip-\ALG@thistlm}
-    \makeatother
+    \input{algorithm.tex}
 site: bookdown::bookdown_site
 documentclass: extarticle
 geometry: "left=1cm, right=1cm, top=2.5cm, bottom=2.5cm"
