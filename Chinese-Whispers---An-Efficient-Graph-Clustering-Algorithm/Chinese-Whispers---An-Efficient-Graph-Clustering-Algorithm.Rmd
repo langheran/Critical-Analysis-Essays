@@ -101,7 +101,7 @@ The authors propose
 		\OUTPUT{An assignment of the clusters for each vertex $\in$ $ G.V $}
 		\Procedure{ChineseWhispers}{$G$}
             \Foreach{ vertex $(i, v) \in enum(G.V)$}
-
+                \State class($v_i$) $\gets i$
             \EndForeach
             \State\Return ClusterAssignments
 		\EndProcedure
