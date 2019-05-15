@@ -2,7 +2,7 @@
 title: Effective and Generalizable Graph-Based Clustering for Faces in the Wild
 subtitle:
 author: "[Nisim Hurst](mailto:langheran@gmail.com)"
-date: Friday 10 May 2019
+date: Tuesday 14 May 2019
 abstract: ""
 bibliography: Effective-and-Generalizable-Graph-Based-Clustering-for-Faces-in-the-Wild/Effective-and-Generalizable-Graph-Based-Clustering-for-Faces-in-the-Wild.bib
 urlcolor: blue
