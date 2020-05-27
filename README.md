@@ -35,6 +35,10 @@ A repository for storing some of the critical analyses for papers I have read.
 - [Extraction of Parking Lot Structure From Aerial Image In Urban Areas](Extraction-of-Parking-Lot-Structure-From-Aerial-Image-In-Urban-Areas.pdf)
 - [Self Supervised Aerial Image Analysis for Extracting Parking Lot Structure](Self-Supervised-Aerial-Image-Analysis-for-Extracting-Parking-Lot-Structure.pdf)
 
+### OCR
+
+- [CUTIE: Learning to Understand Documents](CUTIE_Learning_to_Understand_Documents\CUTIE_Learning_to_Understand_Documents.pdf)
+
 ### Quantum Computation
 
 - [Plenty of room at the bottom](Plenty-of-room-at-the-bottom.pdf)
