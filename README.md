@@ -37,7 +37,7 @@ A repository for storing some of the critical analyses for papers I have read.
 
 ### OCR
 
-- [CUTIE: Learning to Understand Documents](CUTIE_Learning_to_Understand_Documents\CUTIE_Learning_to_Understand_Documents.pdf)
+- [CUTIE: Learning to Understand Documents](CUTIE_Learning_to_Understand_Documents.pdf)
 
 ### Quantum Computation
 
