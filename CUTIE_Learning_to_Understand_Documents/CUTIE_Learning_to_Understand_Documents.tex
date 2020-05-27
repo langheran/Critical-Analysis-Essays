@@ -1,0 +1,312 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={CUTIE\_Learning\_to\_Understand\_Documents},
+            pdfauthor={Nisim Hurst},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[style=authoryear]{biblatex}
+
+\addbibresource{CUTIE\_Learning\_to\_Understand\_Documents/CUTIE\_Learning\_to\_Understand\_Documents.bib}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{CUTIE\_Learning\_to\_Understand\_Documents}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{\href{mailto:langheran@gmail.com}{Nisim Hurst}}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{Tuesday 26 May 2020}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{truncate}
+\renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+\fancyhf{}
+\lhead{\small\truncate{400pt}{\rightmark}}
+\rhead{\small\hyperref[toc]{Table Of Contents}}
+\rfoot{Page \thepage}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{attachfile}
+\makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage{cleveref}
+
+\usepackage{xcolor}
+\definecolor{block-gray}{gray}{0.85}
+\usepackage{environ}
+\NewEnviron{quoteblock}{\colorbox{block-gray}{
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+\small\addtolength{\leftskip}{10mm}
+\addtolength{\rightskip}{10mm}
+\BODY}}}
+\renewcommand{\quote}{\quoteblock}
+\renewcommand{\endquote}{\endquoteblock}
+\ifdef{\printbibliography}{
+   \defbibheading{subsubbibliography}[\refname]{\subsubsection*{#1}}
+   \let\oldprintbibliography\printbibliography
+   \renewcommand{\printbibliography}[1]{
+      \phantomsection
+      \addcontentsline{toc}{section}{References}
+      \oldprintbibliography[title={References},heading=subsubbibliography]
+      }
+}{
+
+}
+
+\begin{document}
+\maketitle
+
+\label{toc}
+
+\hypertarget{cutie-learning-to-understand-documents}{%
+\subsection{CUTIE: Learning to Understand Documents}\label{cutie-learning-to-understand-documents}}
+
+The article was written by \autocite{zhao2019cutie}. It was was cited \href{https://scholar.google.com/scholar?cites=9864657072346957710\&as_sdt=2005\&sciodt=0,5\&hl=en}{4} times according to Google Scholar. The task performed was semantic instance segmentation over a text grid using convolutional neural networks at character level. They used the average precision metric (AP) in two forms, one strict and the other soft, over 9 classes for each field they tried to detect.
+
+\hypertarget{hypothesis}{%
+\subsubsection{Hypothesis}\label{hypothesis}}
+
+By taking into account both position and semantic meaning for segmenting 2D documents, a CNN will be able to outperform other algorithms based on named entity recognition.
+
+\hypertarget{evidence-and-results}{%
+\subsubsection{Evidence and Results}\label{evidence-and-results}}
+
+\hypertarget{dataset}{%
+\paragraph{Dataset}\label{dataset}}
+
+\begin{itemize}
+\tightlist
+\item
+  Self-built dataset with 4,484 labelled receipts. 3,375 samples are used for training and 1,125 for testing, with around 1500 samples for each of the three document types (Taxi, Meals/Entretainment and Hotel).
+\item
+  ICDAR 2019 task 3 with 1000 scanned receipt images. 627 for training/validation, 157 validation, 470 training. 55 for testing.
+\item
+  8 key information classes and one don't care class.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    DontCare
+  \item
+    VendorName
+  \item
+    VendorTaxID
+  \item
+    InvoiceDate
+  \item
+    InvoiceNumber
+  \item
+    ExpenseAmount
+  \item
+    BaseAmount
+  \item
+    TaxAmount
+  \item
+    TaxRate
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{architecture}{%
+\paragraph{Architecture}\label{architecture}}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.17\columnwidth}\raggedright
+layer name\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright
+operations\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright
+input dimension\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright
+output dimension\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright
+comments\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.17\columnwidth}\raggedright
+embedding layer\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+20000\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+128\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright
+conv block\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+{[}3 × 5{]}×4\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+256\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+256\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+stride=1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright
+atrous conv bloc\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+{[}3 × 5{]}×4\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+256\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+256\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+stride=1, rate=2\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright
+ASPP module\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+{[}3 × 5{]}×3, global pooling, concat, 1 × 1\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+256\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+256\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+stride=1, rate=\{4,8,16\}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright
+shorcut layer\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+concat, 1 × 1\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+256\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+64\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright
+output layer\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+1 × 1\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+64\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+9\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{results}{%
+\paragraph{Results}\label{results}}
+
+\begin{itemize}
+\tightlist
+\item
+  CloudScan \autocite{palm2017cloudscan}
+\item
+  BERT \autocite{devlin2018bert}
+\item
+  CUTIE-A
+\item
+  CUTIE-B
+\end{itemize}
+
+\hypertarget{contribution}{%
+\subsubsection{Contribution}\label{contribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  A dataset of roughly 4500 grid texts with labels for their corresponding 9 classes.
+\item
+  Convolutional architecture using multiple subnetworks with high-resolution.
+\item
+  Convolutional architecture using the atrous convolution and a single network.
+\end{itemize}
+
+\hypertarget{weaknesses}{%
+\subsubsection{Weaknesses}\label{weaknesses}}
+
+The authors don't tokenize each word into a meaningful entity. Instead, they use a predefined dictionary.
+
+\hypertarget{future-work}{%
+\subsubsection{Future Work}\label{future-work}}
+
+\printbibliography
+
+
+\end{document}
